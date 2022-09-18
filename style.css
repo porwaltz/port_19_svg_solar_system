@@ -1,0 +1,187 @@
+:root {
+    /*palette 1*/
+    --dark-olive-green: #606c38ff; --p1-1: #606c38ff;
+    --kombu-green: #283618ff; --p1-2: #283618ff;
+    --cornsilk: #fefae0ff; --p1-3: #fefae0ff;
+    --earth-yellow: #dda15eff; --p1-4: #dda15eff;
+    --liver-dogs: #bc6c25ff; --p1-5: #bc6c25ff;
+    /*palette 2*/
+    --pale-spring-bud: #ccd5aeff; --p2-1: #ccd5aeff;
+    --pale-spring-bud-2: #e9edc9ff; --p2-2: #e9edc9ff;
+    --cornsilk: #fefae0ff; --p2-3: #fefae0ff;
+    --papaya-whip: #faedcdff; --p2-4: #faedcdff;
+    --fawn: #d4a373ff; --p2-5: #d4a373ff;
+    /*palette 3*/
+    --artichoke: #a3a380ff; --p3-1: #a3a380ff;
+    --medium-champagne: #d6ce93ff; --p3-2: #d6ce93ff;
+    --beige: #efebceff; --p3-3: #efebceff;
+    --tumbleweed: #d8a48fff; --p3-4: #d8a48fff;
+    --old-rose: #bb8588ff; --p3-5: #bb8588ff;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(29, 11, 42);
+    color: var(--papaya-whip);
+}
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1, p{
+    margin: 1em;
+    font-weight: lighter;
+    font-family: 'Courier New', Courier, monospace
+}
+p { margin-top: 2em; }
+
+svg {
+
+    background-color: rgb(29, 11, 42);
+}
+#links {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+a, i{
+    text-decoration: none;
+    color: var(--papaya-whip)
+}
+.orbit {
+    fill: none;
+    stroke: beige;
+    stroke-width: 0.5;
+    stroke-dasharray: 3;
+    cx: 50%; cy: 50%;
+    animation: dots 40s linear infinite;
+}
+
+#sun{
+    fill: var(--p1-4);
+    filter: drop-shadow(0px 0px 10px rgb(255, 238, 183));
+    animation: glow 2s linear infinite alternate;
+}
+#mercury {
+    animation: 
+    orbitate-x-mercury 0.5s ease-in-out infinite alternate,
+    orbitate-y-mercury 0.5s ease-in-out 0.25s infinite alternate;
+}
+#venus {
+    fill: burlywood;
+    animation: 
+    orbitate-x-venus 1.5s ease-in-out infinite alternate,
+    orbitate-y-venus 1.5s ease-in-out 0.75s infinite alternate;
+}
+#earth {
+    fill: teal;
+    animation: 
+    orbitate-x-earth 2s ease-in-out infinite alternate,
+    orbitate-y-earth 2s ease-in-out 1s infinite alternate;
+}
+#mars {
+    fill: chocolate;
+    animation: 
+    orbitate-x-mars 8s ease-in-out infinite alternate,
+    orbitate-y-mars 8s ease-in-out 4s infinite alternate;
+}
+#jupiter {
+    fill: indianred;
+    animation: 
+    orbitate-x-jupiter 20s ease-in-out infinite alternate,
+    orbitate-y-jupiter 20s ease-in-out 10s infinite alternate;
+}
+#saturn, #saturn-rings {
+    fill: var(--medium-champagne);
+    animation: 
+    orbitate-x-saturn 24s ease-in-out infinite alternate,
+    orbitate-y-saturn 24s ease-in-out 12s infinite alternate;
+}
+#saturn-rings{ fill: rgb(96, 96, 96); }
+#uranus , #uranus-rings{
+    animation: 
+    orbitate-x-uranus 30s ease-in-out infinite alternate,
+    orbitate-y-uranus 30s ease-in-out 15s infinite alternate;
+}
+#uranus-rings{ fill: rgb(167, 167, 167); }
+#neptune {
+    fill: cornflowerblue;
+    animation: 
+    orbitate-x-neptune 36s ease-in-out infinite alternate,
+    orbitate-y-neptune 36s ease-in-out 18s infinite alternate;
+}
+
+@keyframes glow {
+    0%  { filter: drop-shadow(0px 0px 0px rgba(255, 238, 183, 0.5)); }
+    100%  { filter: drop-shadow(0px 0px 48px rgba(255, 238, 183, 0.8)); }
+}
+@keyframes dots {
+    to { stroke-dashoffset: 1000; }
+}
+@keyframes orbitate-x-mercury {
+    0%      { cx: 420;}
+    100%    { cx: 540;}
+}
+@keyframes orbitate-y-mercury {
+    0%      { cy: 210}
+    100%    { cy: 328}
+}
+@keyframes orbitate-x-venus {
+    0%      { cx: 408;}
+    100%    { cx: 552;}
+}
+@keyframes orbitate-y-venus {
+    0%      { cy: 198}
+    100%    { cy: 340}
+}
+@keyframes orbitate-x-earth {
+    0%      { cx: 392;}
+    100%    { cx: 568;}
+}
+@keyframes orbitate-y-earth {
+    0%      { cy: 182}
+    100%    { cy: 358}
+}
+@keyframes orbitate-x-mars {
+    0%      { cx: 372;}
+    100%    { cx: 588;}
+}
+@keyframes orbitate-y-mars {
+    0%      { cy: 162}
+    100%    { cy: 378}
+}
+@keyframes orbitate-x-jupiter {
+    0%      { cx: 344;}
+    100%    { cx: 616;}
+}
+@keyframes orbitate-y-jupiter {
+    0%      { cy: 134}
+    100%    { cy: 406}
+}
+@keyframes orbitate-x-saturn {
+    0%      { cx: 310}
+    100%    { cx: 650}
+}
+@keyframes orbitate-y-saturn {
+    0%      { cy: 100}
+    100%    { cy: 440}
+}
+@keyframes orbitate-x-uranus {
+    0%      { cx: 270}
+    100%    { cx: 690}
+}
+@keyframes orbitate-y-uranus {
+    0%      { cy: 60}
+    100%    { cy: 480}
+}
+@keyframes orbitate-x-neptune {
+    0%      { cx: 224}
+    100%    { cx: 736}
+}
+@keyframes orbitate-y-neptune {
+    0%      { cy: 16}
+    100%    { cy: 524}
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0d3bdb91b0.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="flex-container">
+        <h1>Our solar system</h1>
+        <svg width="960" height="540" viewBox="0 0 960 540">
+            <g id="whole-sun" transform="rotate(315)" transform-origin="50% 50%">
+                <polygon class="ray" id="ray-up" points="448,270 512,270 480,220" transform-origin="50% 50%" fill="#ffbb55"/>
+                <polygon class="ray" id="ray-down" points="448,270 512,270 480,320" transform-origin="50% 50%" fill="#ffbb55"/>
+                <polygon class="ray" id="ray-left" points="480,238 528,270 480,302" transform-origin="50% 50%" fill="#ffbb55"/>
+                <polygon class="ray" id="ray-right" points="480,238 432,270 480,302" transform-origin="50% 50%" fill="#ffbb55"/>
+                <polygon class="ray-b" id="ray-b-up" points="448,270 512,270 480,220" transform-origin="50% 50%" fill="#ddcc44" transform="rotate(45)"/>
+                <polygon class="ray-b" id="ray-b-down" points="448,270 512,270 480,320" transform-origin="50% 50%" fill="#ddcc44" transform="rotate(45)"/>
+                <polygon class="ray-b" id="ray-b-left" points="480,238 528,270 480,302" transform-origin="50% 50%" fill="#ddcc44" transform="rotate(45)"/>
+                <polygon class="ray-b" id="ray-b-right" points="480,238 432,270 480,302" transform-origin="50% 50%" fill="#ddcc44" transform="rotate(45)"/>
+                <circle class="planet" id="sun" cx="50%" cy="50%" r="32"/>
+                <animateTransform
+                    attributeType="XML"
+                    attributeName="transform"
+                    type="rotate"
+                    from="360" to="0"
+                    begin="0s" dur="24"
+                    repeatCount="indefinite"
+                    additive="sum"/>
+            </g>
+            <g>
+                <circle class="orbit" r="60"/>
+                <circle class="planet" id="mercury" cx="420" cy="270" r="2" fill="gray"/>
+            </g>
+            <g>
+                <circle class="orbit" r="74"/>
+                <circle class="planet" id="venus" cx="420" cy="270" r="3" />
+            </g>
+            <g>
+                <circle class="orbit" r="90"/>
+                <circle class="planet" id="earth" cx="420" cy="270" r="4"/>
+            </g>
+            <g>
+                <circle class="orbit" r="110"/>
+                <circle class="planet" id="mars" cx="420" cy="270" r="2.5" />
+            </g>
+            <g>
+                <circle class="orbit" r="138"/>
+                <circle class="planet" id="jupiter" cx="420" cy="270" r="10" />
+            </g>
+            <g>
+                <circle class="orbit" r="172"/>
+                <circle class="planet" id="saturn" cx="420" cy="270" r="8" transform-origin="50% 50%" transform="rotate(315)"/>
+                <ellipse class="ring" id="saturn-rings" cx="420" cy="270" rx="12" ry="2" transform-origin="50% 50%" transform="rotate(315)"/>
+            </g>
+            <g>
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#606c38ff;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#1d0b2a;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <circle class="orbit" r="212"/>
+                <circle class="planet" id="uranus" cx="420" cy="270" r="7" fill="url(#grad1)" transform-origin="50% 50%" transform="rotate(90)"/>
+                <ellipse class="ring" id="uranus-rings" cx="420" cy="270" rx="12" ry="1" transform-origin="50% 50%" transform="rotate(90)"/>
+            </g>
+            <g>
+                <circle class="orbit" r="258"/>
+                <circle class="planet" id="neptune" cx="420" cy="270" r="7" />
+            </g>
+        </svg>
+        <p>made by porwaltz(2022)</p>
+        <div id="links">
+            <a href="https://github.com/porwaltz/" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://waltz-89.tumblr.com/" target="_blank"><i class="fa-brands fa-tumblr"></i></a>
+            <a href="https://twitter.com/waltz_89/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/porwaltz/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/walter-nicolas-gonzalez/" target="_blank"><i class="fa-brands fa-linkedin"></i>
+            <a href="https://codepen.io/porwaltz" target="_blank"><i class="fa-brands fa-codepen"></i>
+            <a href="https://waltz-89.itch.io/" target="_blank"><i class="fa-brands fa-itch-io"></i>
+        </div>
+    </div>
+</body>
+</html>
